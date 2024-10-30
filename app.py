@@ -80,7 +80,7 @@ def buy():
             return apology("invalid symbol", 400)
         total_cost = float(stock_data["price"]) * int(shares)
         if total_cost >= cash:
-            return apology("can't afford", 400)
+            return apology("can not afford", 400)
         else:
             db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, session["user_id"])
             db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", session["user_id"], symbol, shares, stock_data["price"])
