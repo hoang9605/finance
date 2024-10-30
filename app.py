@@ -229,3 +229,6 @@ def deposit():
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", money, session["user_id"])
         flash(f"Added {usd(money)} to your balance!")
         return redirect("/")
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
