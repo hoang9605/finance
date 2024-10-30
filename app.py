@@ -54,6 +54,7 @@ def index():
 
     return render_template("index.html", stocks=stocks, cash=usd(cash), total_value=usd(total_value))
 
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
@@ -69,7 +70,7 @@ def buy():
         elif not shares:
             return apology("missing share", 400)
         elif not shares.isdigit():
-            return apology("share must be positive integer", 400)
+            return apology("share must be positive integer hong xautrai", 400)
         else:
             shares = int(shares)
         if shares <= 0:
