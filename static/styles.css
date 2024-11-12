@@ -1,3 +1,9 @@
+body {
+    background-image: url('/static/2927314.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /* Size for brand */
 nav .navbar-brand
 {
